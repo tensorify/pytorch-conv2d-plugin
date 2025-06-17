@@ -148,4 +148,6 @@ class PTConv2d {
   }
 }
 
-module.exports = PTConv2d; 
+module.exports = {
+  PTConv2d
+}; 
