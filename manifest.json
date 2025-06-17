@@ -1,0 +1,103 @@
+{
+  "name": "PyTorch Conv2d Plugin",
+  "slug": "pytorch-conv2d-plugin",
+  "version": "1.0.0",
+  "description": "PyTorch 2D convolutional layer node for building neural networks with configurable parameters including channels, kernel size, stride, and padding",
+  "author": "Tensorify",
+  "license": "MIT",
+  "homepage": "https://tensorify.io/plugins/pytorch-conv2d",
+  "repository": "https://github.com/tensorify/pytorch-conv2d-plugin",
+  "keywords": [
+    "pytorch",
+    "conv2d",
+    "convolutional",
+    "neural-network",
+    "deep-learning"
+  ],
+  "category": "layers",
+  "tags": [
+    "pytorch",
+    "layers",
+    "convolutional",
+    "neural-networks"
+  ],
+  "tensorifyVersion": ">=1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "dependencies": {
+    "@tensorify/types": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.9.0"
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\"",
+    "lint": "echo \"No linting specified\""
+  },
+  "nodes": [
+    {
+      "id": "PTConv2d",
+      "name": "PyTorch Conv2d Layer",
+      "description": "PyTorch 2D convolutional layer for building neural networks with configurable parameters",
+      "category": "layers",
+      "nodeType": "LAYER",
+      "version": "1.0.0",
+      "inputs": [
+        {
+          "name": "input_tensor",
+          "type": "tensor",
+          "required": false,
+          "description": "Input tensor (optional for layer definition)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "layer",
+          "type": "layer",
+          "description": "Configured Conv2d layer"
+        },
+        {
+          "name": "output_tensor",
+          "type": "tensor",
+          "description": "Output tensor after convolution"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "codeGeneration": true,
+    "connectionValidation": true,
+    "schemaValidation": true,
+    "securitySandbox": true
+  },
+  "security": {
+    "allowedImports": [
+      "torch",
+      "torch.nn",
+      "numpy"
+    ],
+    "maxExecutionTime": 10000,
+    "memoryLimit": 524288000,
+    "sandbox": true
+  },
+  "quality": {
+    "testCoverage": 0.88,
+    "documentation": "Complete",
+    "codeQuality": "A",
+    "maintainability": "High"
+  },
+  "isPublic": true,
+  "featured": false,
+  "verified": true,
+  "createdAt": "2025-06-17T20:00:00.000Z",
+  "updatedAt": "2025-06-17T20:00:00.000Z"
+} 
